@@ -1,4 +1,4 @@
-# Verlyn Tech website
+# VerlynTech website
 
 Plain static site (HTML, CSS, a little JS). No build step. Everything that gets published lives in `public/`.
 
