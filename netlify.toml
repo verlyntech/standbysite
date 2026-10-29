@@ -1,6 +1,12 @@
 [build]
   publish = "public"
 
+[[redirects]]
+  from = "https://www.verlyntech.com/*"
+  to = "https://verlyntech.com/:splat"
+  status = 301
+  force = true
+
 [[headers]]
   for = "/*"
   [headers.values]
