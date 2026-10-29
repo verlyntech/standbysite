@@ -6,7 +6,8 @@
 <title>Page not found | Verlyn Tech</title>
 <meta name="description" content="This page could not be found.">
 <meta name="robots" content="noindex">
-<meta name="theme-color" content="#0B1A4A">
+<meta name="theme-color" content="#F3F6FF" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#070E26" media="(prefers-color-scheme: dark)">
 <meta property="og:site_name" content="Verlyn Tech">
 <meta property="og:type" content="website">
 <meta property="og:title" content="Page not found | Verlyn Tech">
@@ -20,37 +21,24 @@
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 <link rel="preload" href="/fonts/archivo-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="/assets/styles.css">
+<script>(function(){var d=document.documentElement;try{var t=localStorage.getItem("vt-theme");if(t==="light"||t==="dark")d.setAttribute("data-theme",t)}catch(e){}try{var n=(sessionStorage.getItem("vt-nav")||"").split("@");sessionStorage.removeItem("vt-nav");if(n[0]&&Date.now()-(+n[1]||0)<4000)d.setAttribute("data-nav",n[0]);var t0=+sessionStorage.getItem("vt-t0");if(!t0){t0=Date.now();sessionStorage.setItem("vt-t0",t0)}d.style.setProperty("--el",((Date.now()-t0)/1000)+"s")}catch(e){}})();</script>
 <script defer src="/assets/analytics.js"></script>
 <script defer src="/assets/main.js"></script>
 </head>
-<body class="" style="--pi:1">
+<body>
 <a class="skip" href="#main">Skip to content</a>
-<div class="bd" aria-hidden="true">
-  <div class="sh">
-    <svg class="gsvg" xmlns="http://www.w3.org/2000/svg">
-      <defs>
-        <pattern id="g" width="64" height="64" patternUnits="userSpaceOnUse"><path d="M64 0H0V64" fill="none" stroke="currentColor" stroke-width="1"/></pattern>
-        <pattern id="pl" width="128" height="128" patternUnits="userSpaceOnUse"><path d="M64 55v18M55 64h18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></pattern>
-      </defs>
-      <g class="mv"><rect x="-64" y="-64" width="200%" height="200%" fill="url(#g)"/></g>
-      <rect width="100%" height="100%" fill="url(#pl)" opacity=".7"/>
-    </svg>
-  </div>
-  <div class="sp" style="left:58%;top:-8%;--mx:-7vw;--my:5vh"><i class="s1"></i></div>
-  <div class="sp" style="left:6%;top:48%;--mx:5vw;--my:-6vh"><i class="s2"></i></div>
-  <div class="sp" style="left:78%;top:68%;--mx:-4vw;--my:-7vh"><i class="s3"></i></div>
-  <div class="sp" style="left:32%;top:80%;--mx:6vw;--my:-4vh"><i class="s4"></i></div>
-</div>
+<div class="bg" aria-hidden="true"><i class="k1"></i><i class="k2"></i><i class="k3"></i><i class="k4"></i></div>
+<div class="wipe" id="wipe" aria-hidden="true"></div>
 
 <header class="top"><div class="wrap">
   <a class="logo" href="/" aria-label="Verlyn Tech home"><svg viewBox="0 0 100 56.7" aria-hidden="true"><use href="/assets/sprite.svg#logo"/></svg><span>VERLYN<small>TECH</small></span></a>
   <nav aria-label="Main"><a href="/">Home</a><a href="/services/">Services</a><a href="/process/">How we work</a><a href="/why-verlyn/">Why Verlyn</a><a href="/industries/">Industries</a><a href="/contact/">Contact</a></nav>
-  <a class="btn" href="/contact/" data-track="cta_start_pilot">Start a pilot</a>
+  <div class="hdr-r"><button class="tog" id="tog" type="button" aria-label="Switch to dark mode"><svg class="moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 14.5A8 8 0 0 1 9.5 4 8 8 0 1 0 20 14.5z"/></svg><svg class="sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M2 12h2M20 12h2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg></button><a class="btn sm" href="/contact/" data-track="cta_start_pilot">Start a pilot</a></div>
 </div></header>
 
 <main id="main">
-<div class="page"><div class="wrap pg">
-  <div class="pan tpan">
+<div class="page"><div class="wrap">
+  <div class="cl tpan">
     <svg class="wm2" viewBox="0 0 100 56.7" aria-hidden="true"><use href="/assets/sprite.svg#logo"/></svg>
     <h1>That page doesn’t exist.</h1>
     <p class="lead">The link may be old or mistyped. Here are the places most people are looking for.</p>
@@ -60,6 +48,6 @@
 </main>
 
 <!-- TODO before launch: add your registered company name and trade licence number to this footer -->
-<footer><div class="wrap"><span><svg viewBox="0 0 100 56.7" aria-hidden="true"><use href="/assets/sprite.svg#logo"/></svg>© 2026 Verlyn Tech</span><span class="fl"><a href="/privacy/">Privacy</a><a href="/terms/">Terms</a></span><span>Installed in weeks. Proven with your numbers.</span></div></footer>
+<footer class="foot"><div class="wrap"><span><svg viewBox="0 0 100 56.7" aria-hidden="true"><use href="/assets/sprite.svg#logo"/></svg>© 2026 Verlyn Tech</span><span class="fl"><a href="/privacy/">Privacy</a><a href="/terms/">Terms</a></span><span>Installed in weeks. Proven with your numbers.</span></div></footer>
 </body>
 </html>
