@@ -27,7 +27,7 @@
     window.dataLayer = window.dataLayer || [];
     window.gtag = function () { dataLayer.push(arguments); };
     gtag("js", new Date());
-    gtag("config", GA_ID, { anonymize_ip: true });
+    gtag("config", GA_ID);
     var s = document.createElement("script");
     s.async = true;
     s.src = "https://www.googletagmanager.com/gtag/js?id=" + encodeURIComponent(GA_ID);
@@ -44,10 +44,12 @@
   }
 
   function track(name) {
+    var sent = false;
     try {
-      if (GA_ID && window.gtag) gtag("event", name);
-      if (PLAUSIBLE_SRC && window.plausible) plausible(name);
+      if (GA_ID && window.gtag) { gtag("event", name); sent = true; }
+      if (PLAUSIBLE_SRC && window.plausible) { plausible(name); sent = true; }
     } catch (e) {}
+    return sent;
   }
 
   function banner() {
@@ -62,10 +64,19 @@
     document.body.appendChild(d);
   }
 
+  // form_submit only counts when the visitor arrives from the contact page, and once per submission
+  var FS = "vt-fs";
+  function fromContact() {
+    try { return new URL(document.referrer).pathname.indexOf("/contact") === 0 && new URL(document.referrer).origin === location.origin; } catch (e) { return false; }
+  }
   function fireView() {
     var v = document.body.getAttribute("data-track-view");
-    if (v) track(v);
+    if (!v) return;
+    if (v !== "form_submit") { track(v); return; }
+    try { if (sessionStorage.getItem(FS)) return; } catch (e) {}
+    if (fromContact() && track(v)) { try { sessionStorage.setItem(FS, "1"); } catch (e) {} }
   }
+  try { if (location.pathname.indexOf("/contact") === 0) sessionStorage.removeItem(FS); } catch (e) {}
 
   document.addEventListener("click", function (e) {
     var a = e.target.closest && e.target.closest("[data-track]");

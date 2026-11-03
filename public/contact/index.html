@@ -4,12 +4,15 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Contact – Start a pilot | Verlyn Tech</title>
+<link rel="icon" href="/favicon.ico" sizes="48x48">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="/favicon.png" type="image/png" sizes="192x192">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
 <meta name="description" content="Talk to Verlyn Tech about where your business is losing leads. Message us on WhatsApp, email, or send a short enquiry.">
 <link rel="canonical" href="https://verlyntech.com/contact/">
-<link rel="icon" type="image/svg+xml" href="favicon.svg">
 <meta property="og:url" content="https://verlyntech.com/contact/">
-<meta name="theme-color" content="#F3F6FF" media="(prefers-color-scheme: light)">
-<meta name="theme-color" content="#070E26" media="(prefers-color-scheme: dark)">
+<meta name="theme-color" content="#F8F7F3" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#0B0C10" media="(prefers-color-scheme: dark)">
 <meta property="og:site_name" content="Verlyn Tech">
 <meta property="og:type" content="website">
 <meta property="og:title" content="Contact – Start a pilot | Verlyn Tech">
@@ -19,9 +22,6 @@
 <meta property="og:image:height" content="630">
 <meta property="og:image:alt" content="Verlyn Tech: Built to move business forward">
 <meta name="twitter:card" content="summary_large_image">
-<link rel="icon" href="/favicon.svg" type="image/svg+xml">
-<link rel="alternate icon" type="image/png" href="favicon.png">
-<link rel="apple-touch-icon" href="/apple-touch-icon.png">
 <link rel="preload" href="/fonts/archivo-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="/assets/styles.css">
 <script>(function(){var d=document.documentElement;try{var t=localStorage.getItem("vt-theme");if(t==="light"||t==="dark")d.setAttribute("data-theme",t)}catch(e){}try{var n=(sessionStorage.getItem("vt-nav")||"").split("@");sessionStorage.removeItem("vt-nav");if(n[0]&&Date.now()-(+n[1]||0)<4000)d.setAttribute("data-nav",n[0]);var t0=+sessionStorage.getItem("vt-t0");if(!t0){t0=Date.now();sessionStorage.setItem("vt-t0",t0)}d.style.setProperty("--el",((Date.now()-t0)/1000)+"s")}catch(e){}})();</script>
@@ -57,18 +57,17 @@
   <form class="cf" name="contact" method="POST" action="/thanks/" data-netlify="true" netlify-honeypot="bot-field">
     <input type="hidden" name="form-name" value="contact">
     <p hidden><label>Leave this empty: <input name="bot-field" tabindex="-1" autocomplete="off"></label></p>
-    <label>Name<input name="name" type="text" autocomplete="name" required></label>
-    <label>Email<input name="email" type="email" autocomplete="email" required></label>
-    <label>Company<input name="company" type="text" autocomplete="organization"></label>
-    <label>Phone / WhatsApp (optional)<input name="phone" type="tel" autocomplete="tel"></label>
-    <label class="full">Where are you losing leads?<textarea name="message" rows="3" required></textarea></label>
+    <label>Name<input name="name" type="text" maxlength="100" autocomplete="name" required></label>
+    <label>Email<input name="email" type="email" maxlength="254" autocomplete="email" required></label>
+    <label>Company<input name="company" type="text" maxlength="100" autocomplete="organization"></label>
+    <label>Phone / WhatsApp (optional)<input name="phone" type="tel" maxlength="30" autocomplete="tel"></label>
+    <label class="full">Where are you losing leads?<textarea name="message" rows="3" maxlength="2000" required></textarea></label>
     <button class="btn" type="submit">Send enquiry</button>
     <p class="fine full">We use these details only to reply to you. See our <a href="/privacy/">privacy policy</a>.</p>
   </form>
 </div></div></div>
 </main>
 
-<!-- TODO before launch: add your registered company name and trade licence number to this footer -->
 <footer class="foot"><div class="wrap"><span><svg viewBox="0 0 100 56.7" aria-hidden="true"><use href="/assets/sprite.svg#logo"/></svg>© 2026 Verlyn Tech</span><span class="fl"><a href="/privacy/">Privacy</a><a href="/terms/">Terms</a></span><span>Installed in weeks. Proven with your numbers.</span></div></footer>
 </body>
 </html>
